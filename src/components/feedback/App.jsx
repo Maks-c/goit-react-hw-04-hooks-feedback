@@ -12,7 +12,7 @@ const App = () => {
     const [good, setGood] = useState(0)
     const [bad, setBad] = useState(0)
     const [neutral, setNeutral] = useState(0)
-
+    console.log(useState())
     const countPositiveFeedbackPercentage = () => {
         const percentage = (good * 100) / total;
         return Math.round(percentage)
@@ -39,6 +39,7 @@ const App = () => {
     const total = good + neutral + bad
     const obj = Object.keys({good,neutral,bad})
     const percentage = countPositiveFeedbackPercentage()
+
 
     return <AppWrapper>
         <Section title='Please leave feedback'>
